@@ -8,7 +8,7 @@ export default defineConfig({
   plugins: [
     tanstackStart({
       server: {
-        preset: "vercel",
+        preset: process.env.NITRO_PRESET ?? "vercel",
         entry: "server",
       },
     }),
